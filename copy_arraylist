@@ -1,0 +1,17 @@
+/*
+Write a program to copy one ArrayList into another.
+
+*/
+
+import java.util.*;
+class Arraylist{
+    public static void main(String[]args)
+    {
+        ArrayList<Integer>al=new ArrayList<Integer>(Arrays.asList(1,2,3,4));
+        ArrayList <Integer>al1=new ArrayList<Integer>(al);
+        
+        System.out.println("print original arrays:"+al);
+        System.out.println("print copy arrays:"+al1);
+        
+    }
+}
