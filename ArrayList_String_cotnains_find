@@ -1,0 +1,27 @@
+/*
+Check if a particular element exists in an ArrayList
+*/
+import java.util.*;
+class ArrayListex{
+    public static void main(String[]args)
+    {
+           ArrayList<String>al=new ArrayList<String>(Arrays.asList("aliya","riya","ram","priya"));
+           System.out.println("list name : "+al);
+           Scanner sc=new Scanner(System.in);
+           System.out.println("finding string:");
+           String s=sc.nextLine();
+           if(al.contains(s))
+           {
+               System.out.println(s+" name is exist");
+           }
+           else
+           {
+                System.out.println(s+" name is  not exist");
+           }
+           
+    }
+}
+list name : [aliya, riya, ram, priya]
+finding string:
+priya
+priya name is exist
