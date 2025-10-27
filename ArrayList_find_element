@@ -1,0 +1,32 @@
+/*
+Check if a particular element exists in an ArrayList
+*/
+import java.util.*;
+class ArrayListex{
+    public static void main(String[]args)
+    {
+            ArrayList<Integer> al =new ArrayList<Integer>(Arrays.asList(10,40,30,20,60,70));
+            System.out.println("list:"+al);
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter finding number:");
+            int element=sc.nextInt();
+            if(al.contains(element))
+            {
+                System.out.println(element+"its is exists");
+            }
+            else
+            {
+                 System.out.println(element+" its is  not exists");
+            }
+    }
+}
+/*
+
+op:
+list:[10, 40, 30, 20, 60, 70]
+enter finding number:
+60
+60its is exists
+
+
+*/
