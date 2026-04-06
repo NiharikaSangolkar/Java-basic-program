@@ -1,0 +1,33 @@
+//maxword length:length of the longest substring without repeating characters.
+import java.util.*;
+class maxword{
+    public static int maxword(String s)
+    {
+        int max=0;
+        for(int i=0;i<s.length();i++)
+        {
+            Set<Character>set=new HashSet<>();
+            for(int j=i;j<s.length();j++)
+            {
+                char ch=s.charAt(j);
+                if(set.contains(ch))
+                {
+                    break;
+                }
+                set.add(ch);
+                if(set.size()>max)
+                {
+                    max=set.size();
+                }
+            }
+        }
+        return max;
+    }
+    public static void main(String[]args)
+    {
+        String s1="gdgdhdfyusrucvwu";
+        System.out.println("maxword count:"+maxword(s1));
+    }
+}
+//op:
+//maxword count:7
