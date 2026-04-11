@@ -1,0 +1,40 @@
+import java.util.*;
+class anagramex{
+    public static boolean isanagram(String s1,String s2)
+    {
+        if(s1.length()!=s2.length())
+        {
+            return false;
+        }
+        int count[]=new int[256];
+        for(int i=0;i<s1.length();i++)
+        {
+            count[s1.charAt(i)]++;
+            count[s2.charAt(i)]--;
+        }
+        for(int result:count)
+        {
+            if(result!=0)
+            {
+               return false;
+            }
+        }
+        return true;
+        
+    }
+    public static void main(String[]args)
+    {
+        
+        String s1="slient";
+        String s2="listenb";
+        if( isanagram(s1,s2))
+        {
+            System.out.println(" it is anagram");
+        }
+        else
+        {
+             System.out.println(" it is not anagram");
+        }
+    }
+}
+//op: it is not anagram
