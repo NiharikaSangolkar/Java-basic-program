@@ -31,3 +31,32 @@ class maxword{
 }
 //op:
 //maxword count:7
+
+/*
+START
+  ↓
+max = 0
+  ↓
+i = 0 to end  ← outer loop (starting points)
+  ↓
+  create empty set
+  ↓
+  j = i to end  ← inner loop (expand window)
+    ↓
+    get char at j
+    ↓
+    duplicate? → YES → break inner loop
+         ↓
+         NO → add to set
+         ↓
+         set.size > max? → YES → update max
+         ↓
+         move j forward
+  ↓
+  move i forward
+  ↓
+return max
+  ↓
+PRINT max
+
+*/
