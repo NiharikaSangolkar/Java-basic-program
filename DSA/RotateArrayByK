@@ -1,0 +1,29 @@
+//rotate array by k
+import java.util.*;
+class rotatearraybyk{
+    public static void rotateArray(int[]arr,int k)
+    {
+        int n=arr.length;
+        int result[]=new int[n];
+        k=k%n;
+        for(int i=0;i<n;i++)
+        {
+            result[(i+k)%n]=arr[i];
+        }
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=result[i];
+        }
+    }
+    public static void main(String args[])
+    {
+        int arr[]={1,2,3,5};
+        int k=2;
+        rotateArray(arr,k);
+        System.out.println("rotate array by k:"+Arrays.toString(arr));
+    }
+}
+/*
+op:
+rotate array by k:[3, 5, 1, 2]
+*/
