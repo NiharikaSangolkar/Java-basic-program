@@ -1,0 +1,29 @@
+//two sum
+/*
+Given an array of integers and a target, return the indices of two numbers that add up to the target. Assume exactly one solution exists.
+Example
+int[] nums = {2, 7, 11, 15};
+int target = 9;
+// Output: [0, 1]  (nums[0] + nums[1] == 9)*/
+import java.util.*;
+public class twosum{
+    
+    public static void main(String[]args)
+    {
+        int num[]={2,7,11,15};
+        int k=9;
+        for(int i=0;i<num.length;i++)
+        {
+            for(int j=0;j<num.length;j++)
+            {
+                if(num[i]+num[j]==k)
+                {
+                    System.out.println(i+" "+j);
+                    return;
+                }
+            }
+            
+        }
+      
+    }
+}
