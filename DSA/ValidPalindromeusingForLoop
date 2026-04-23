@@ -1,0 +1,36 @@
+import java.util.*;
+class validpalindrome{
+    public static boolean ispalindrome(String s)
+    {
+        StringBuilder s1=new StringBuilder();
+        for(int i=0;i<s.length();i++)
+        {
+            if(Character.isLetterOrDigit(s.charAt(i)))
+            {
+                s1.append(Character.toLowerCase(s.charAt(i)));
+            }
+        }
+       
+        for(int i=s1.length()-1,j=0;i>j;i--,j++)
+        {
+            if(s1.charAt(i)!=s1.charAt(j))
+            {
+                return false;
+            }
+            
+        }
+        return true;
+    }
+    public static void main(String[]args)
+    {
+        String s="A man, a plan, a canal: Panama";
+        if( ispalindrome(s))
+        {
+            System.out.println(" it is valid palindrome");
+        }
+        else
+        {
+             System.out.println(" it is  not valid palindrome");
+        }
+    }
+}
