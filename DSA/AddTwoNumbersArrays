@@ -1,0 +1,31 @@
+import java.util.*;
+class addsum{
+    public static void main(String[]args)
+    {
+        int l1[]={2,4,3};
+        int l2[]={5,6,4};
+        int carry=0;
+        List<Integer>result=new ArrayList<>();
+        int maxlength=Math.max(l1.length,l2.length);
+        for(int i=0;i<maxlength || carry!=0;i++)
+        {
+            int sum=carry;
+            if(i<l1.length)
+            {
+                sum+=l1[i];
+            }
+            if(i<l2.length)
+            {
+                sum+=l2[i];
+            }
+            result.add(sum%10);
+            carry=sum/10;
+        }
+        System.out.println(""+result);
+    }
+}
+/*
+op:
+[7, 0, 8]
+
+*/
