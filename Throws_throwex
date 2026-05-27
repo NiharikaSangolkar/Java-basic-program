@@ -1,0 +1,21 @@
+import java.util.*;
+class votes{
+    public static void vote(int age)throws Exception{
+        if(age<18)
+        {
+            throw new Exception("age must be 18");
+        }
+        System.out.println(" you can vote");
+    }
+    public static void main(String[]args)
+    {
+        try{
+            vote(21);
+            
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
